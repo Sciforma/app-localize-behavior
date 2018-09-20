@@ -280,7 +280,7 @@ Polymer.AppLocalizeBehavior = {
       var translatedValue = resources[language][key];
 
       if (!translatedValue) {
-        return this.useKeyIfMissing ? key : '';
+        return this.useKeyIfMissing ? key : resources['en'][key];
       }
 
       var messageKey = key + translatedValue;
